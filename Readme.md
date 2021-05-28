@@ -12,10 +12,10 @@ Generate it without having it ask any questions:
 ````
 npm init -y
 ````
--Install [Express], [EJS] & [Mongoose]
-[1]:http://expressjs.com/ "Express"
+-Install [Express](http://expressjs.com/), [EJS](https://ejs.co/) & [Mongoose](https://mongoosejs.com/)
+<!-- [1]:http://expressjs.com/ "Express"
 [2]:https://ejs.co/ "EJS"
-[3]:https://mongoosejs.com/ "Mongoose"
+[3]:https://mongoosejs.com/ "Mongoose" -->
 These are the packages we are going to use. 
 
 ````
