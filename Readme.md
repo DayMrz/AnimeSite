@@ -1,11 +1,25 @@
 # Anime App
-Header H1 is used to display the Project heading. 
+Hey there! this is my first attempt to create something that I am passionate about. 
+In the following lines, I will try to give an explanation of how I did it. 
+Please if you have any questions or there are misconceptions, let me know!! :)
 
-## Sub Topic Headings H2
-Sub Topic Headings H2 is used for sub sections like Configurations, Authors etc.
+
+
+## Getting Started
+
+-Create a package.json file.
+Generate it without having it ask any questions:
+````
+npm init -y
+````
+-Install [Express], [EJS] & [Mongoose]
+[1]:http://expressjs.com/ "Express"
+[2]:https://ejs.co/ "EJS"
+[3]:https://mongoosejs.com/ "Mongoose"
+These are the packages we are going to use. 
 
 ````
-pip install boto
+npm i express ejs mongoose
 ````
 
 The above formatting is used to create a box which can display code or command in a well formatted manner.
