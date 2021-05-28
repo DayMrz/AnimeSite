@@ -13,14 +13,16 @@ Generate it without having it ask any questions:
 npm init -y
 ````
 -Install [Express](http://expressjs.com/), [EJS](https://ejs.co/) & [Mongoose](https://mongoosejs.com/)
-<!-- [1]:http://expressjs.com/ "Express"
-[2]:https://ejs.co/ "EJS"
-[3]:https://mongoosejs.com/ "Mongoose" -->
+
 These are the packages we are going to use. 
 
 ````
 npm i express ejs mongoose
 ````
+
+To integrate them in our app, we must require them from our js file. 
+
+
 
 The above formatting is used to create a box which can display code or command in a well formatted manner.
 
