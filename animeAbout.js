@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Anime = require('./models/anime-Schema');
+const Anime = require('./models/animeStore');
 
 mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true })
     .then(() => {
@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true 
         console.log(err)
     })
 
-const animeView = [
+const animeStore = [
     {
         title: 'One Piece',
         premiered: 1999,
@@ -69,7 +69,7 @@ const animeView = [
     }
 ]
 
-Anime.insertMany(animeView)
+Anime.insertMany(animeStore)
     .then(res => {
         console.log(res)
     })
