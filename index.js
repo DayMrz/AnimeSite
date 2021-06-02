@@ -33,6 +33,22 @@ app.get('/mangaStore', async (req, res) => {
     res.render('products/manga-store', { mangas })
 })
 
+app.get('/products/:id', async (req, res) => {
+    const { id } = req.params;
+    const anime = await Anime.findById(id)
+    // console.log(foundAnime)
+    // res.send('anime found!')
+    res.render('products/animeShow', { anime })
+})
+
+app.get('/product/:id', async (req, res) => {
+    const { id } = req.params;
+    const manga = await Manga.findById(id)
+    // console.log(foundManga)
+    // res.send('Manga found!')
+    res.render('products/mangaShow', { manga })
+})
+
 
 app.listen(3000, () => {
     console.log('APP IS LISTENING ON PORT 3000')

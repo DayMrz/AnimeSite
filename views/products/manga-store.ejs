@@ -12,8 +12,9 @@
     <h1>Manga Store </h1>
     <ul>
         <% for(let manga of mangas) { %>
-            <li>
-                <%= manga.name %>
+            <li><a href="/product/<%= manga._id %>">
+                    <%= manga.name %>
+                </a>
             </li>
             <% } %>
     </ul>

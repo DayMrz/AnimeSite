@@ -13,8 +13,10 @@
     <h1>Anime Store</h1>
     <ul>
         <% for(let anime of animes) { %>
-            <li>
-                <%= anime.title %>
+            <li> <a href="/products/<%= anime._id%>">
+                    <%= anime.title %>
+                </a>
+
             </li>
             <% } %>
     </ul>
