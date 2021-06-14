@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const Anime = require('./models/animeStore');
 const Manga = require('./models/mangaStore');
 
-mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Mongo CONNECTION OPEN!')
     })
@@ -15,9 +15,19 @@ mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true 
         console.log(err)
     })
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.get('/', (req, res) => {
+    // res.send('Holi!')
+    res.render('products/home')
+})
+
+app.get('/store', async (req, res) => {
+    res.render('products/store')
+})
 app.get('/animeStore', async (req, res) => {
     const animes = await Anime.find({})
     // console.log(animeStore)

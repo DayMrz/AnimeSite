@@ -1,0 +1,9 @@
+*, *::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/pictures/store-background.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;  
+}
