@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,900;1,700&display=swap');
+
+:root {
+    --color-honey-purple: #551868;
+    --color-flamingo-orange: #EC6137;
+    --color-Gray-Suit: #C5C2CC;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', Sans-serif ;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.2;
+}
+
+header {
+    background-color: var(--color-flamingo-orange) ;
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.9);
+    padding: 1em;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    display: inline;
+}
+
+.nav--visible {
+    position: relative;
+    height: auto;
+    visibility: visible;
+}
+
+.social--nav {
+    background-color: var(--color-Gray-Suit) ;
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+}
+
+/* navbar */
+
+.nav ul {
+    margin: 1em 0 ;
+    list-style: none;
+    padding: 0;
+    height: auto;
+}
+
+.nav li {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__link {
+    color: var(--color-Gray-Suit);
+    text-transform: uppercase;
+    margin-top:  .3em;
+    text-decoration: none;
+} 
+
+.nav__link:focus,
+.nav__link:hover {
+    opacity: .75;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    background-color: var(--mainColor-background);
+    border: 0;
+    color: #fff;
+    position: absolute;
+    right: -1%;
+}
+
+.nav__link--btn {
+    background-color: var(--color-Gray-Suit);
+    color: var(--color-flamingo-orange);
+    border-radius: 100px;
+    padding: .6rem .8rem ;
+} 
+
+.hamburger {
+    font-size: 1.3em;
+    width: 50%;
+    position: relative;
+}
+
+.fa-cloudversify {
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* social--nav */
+
+.fa-twitter,
+.fa-facebook,
+.fa-instagram {
+    color: #fff;
+    margin: 0  1em;
+}
+
+

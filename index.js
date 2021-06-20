@@ -4,7 +4,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const Anime = require('./models/animeShow');
-const Manga = require('./models/mangaStore');
+const Manga = require('./models/mangaShow');
 
 mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -48,7 +48,7 @@ app.get('/mangaShow', async (req, res) => {
 app.get('/products/:id', async (req, res) => {
     const { id } = req.params;
     const anime = await Anime.findById(id)
-    // console.log(foundAnime)
+    // console.log(anime)
     // res.send('anime found!')
     res.render('products/animeDetails', { anime })
 })
@@ -56,9 +56,9 @@ app.get('/products/:id', async (req, res) => {
 app.get('/products/:id', async (req, res) => {
     const { id } = req.params;
     const manga = await Manga.findById(id)
-    // console.log(foundManga)
+    // console.log(manga)
     // res.send('Manga found!')
-    res.render('products/mangaShow', { manga })
+    res.render('products/mangaDetails', { manga })
 })
 
 

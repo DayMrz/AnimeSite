@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Manga = require('./models/mangaStore');
+const Manga = require('./models/mangaShow');
 
 mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true })
     .then(() => {
