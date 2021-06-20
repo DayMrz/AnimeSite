@@ -1,0 +1,23 @@
+<%- include('partials/main/head')%>
+    <%- include('partials/main/header') %>
+
+
+        <h1>
+            <%= anime.title %>
+        </h1>
+        <ul>
+            <li>Premiered: <%= anime.premiered %>
+            </li>
+            <li>Score: <%= anime.score %>
+            </li>
+            <li>Ranked: <%= anime.ranked %>
+            </li>
+            <li>Studios: <%= anime.studios %>
+            </li>
+            <li>Genres: <%= anime.genres %>
+            </li>
+        </ul>
+
+        <a href="/animeStore"> Go to Anime Store</a>
+
+        <%- include('partials/main/footer') %>

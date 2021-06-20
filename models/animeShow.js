@@ -27,7 +27,7 @@ const animeSchema = new mongoose.Schema({
     },
     genres: {
         type: String,
-        enum: ['Kodomomuke', 'Shonen', 'Shoujo', 'Josei', 'Ladies Comics', 'Seinen', 'Seijin']
+        enum: ['Kodomomuke', 'Shounen', 'Shoujo', 'Josei', 'Ladies Comics', 'Seinen', 'Seijin', 'Action', 'Adventure', 'Comedy', 'Super Power', 'Drama', 'Sports', 'Fantasy', 'Supernatural']
     }
     //create a doc call manga, specified price, qty and if it is onSale or OutStock
 

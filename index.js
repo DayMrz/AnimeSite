@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
 
-const Anime = require('./models/animeStore');
+const Anime = require('./models/animeShow');
 const Manga = require('./models/mangaStore');
 
 mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true, useUnifiedTopology: true })
@@ -28,19 +28,21 @@ app.get('/', (req, res) => {
 app.get('/store', async (req, res) => {
     res.render('products/store')
 })
-app.get('/animeStore', async (req, res) => {
+// app.get('/animeShow', async (req, res) => {
+//     res.render('products/animeShow')
+// })
+app.get('/animeShow', async (req, res) => {
     const animes = await Anime.find({})
-    // console.log(animeStore)
+    // console.log(animes)
     // res.send('Hello from Anime App!!')
-
-    res.render('products/anime-store', { animes })
+    res.render('products/animeShow', { animes })
 })
 
-app.get('/mangaStore', async (req, res) => {
+app.get('/mangaShow', async (req, res) => {
     const mangas = await Manga.find({})
-    // console.log(mangaStore)
+    // console.log(mangas)
     // res.send('Hello from Manga App!!')
-    res.render('products/manga-store', { mangas })
+    res.render('products/mangaShow', { mangas })
 })
 
 app.get('/products/:id', async (req, res) => {
@@ -48,10 +50,10 @@ app.get('/products/:id', async (req, res) => {
     const anime = await Anime.findById(id)
     // console.log(foundAnime)
     // res.send('anime found!')
-    res.render('products/animeShow', { anime })
+    res.render('products/animeDetails', { anime })
 })
 
-app.get('/product/:id', async (req, res) => {
+app.get('/products/:id', async (req, res) => {
     const { id } = req.params;
     const manga = await Manga.findById(id)
     // console.log(foundManga)

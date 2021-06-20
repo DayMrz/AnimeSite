@@ -1,40 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/main/head')%>
+    <%- include('partials/main/header')%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= manga.name %>
-    </title>
-</head>
+        <h1>Manga</h1>
+        <ul>
+            <% for(let manga of mangas) { %>
+                <li><a href="/product/<%= manga._id %>">
+                        <%= manga.name %>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
 
-<body>
-    <h1>
-        <%= manga.name %>
-    </h1>
-
-    <ul>
-        <li>
-            Score: <%= manga.score%>
-        </li>
-        <li>
-            Author: <%= manga.author%>
-        </li>
-        <li>
-            Volumes: <%= manga.volumes%>
-        </li>
-        <li>
-            Price Each: <%= manga.priceEach%>
-        </li>
-        <li>
-            Category: <%= manga.category%>
-        </li>
-    </ul>
-
-    <a href="/mangaStore"> Go To Manga Store</a>
-
-</body>
-
-</html>
+        <%- include('partials/main/footer') %>
