@@ -32,16 +32,13 @@ header {
 }
 
 .nav {
-    position: absolute;
-    visibility: hidden;
-    height: 0;
-    display: inline;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 500ms ease-in-out;
 }
 
 .nav--visible {
-    position: relative;
-    height: auto;
-    visibility: visible;
+    max-height: 100vh; 
 }
 
 .social--nav {
@@ -57,7 +54,7 @@ header {
     margin: 1em 0 ;
     list-style: none;
     padding: 0;
-    height: auto;
+
 }
 
 .nav li {

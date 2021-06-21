@@ -119,27 +119,22 @@ header {
 /* hero  */
 .hero {
     background-image: url('/pictures/main-hero-img.jpg');
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: 0px -3px 2px -2px rgba(0, 0, 0, 0.9);
-    padding: 3em 0;
     display: flex;
+    height: calc(calc(100vw / 16) * 9);
+    position: relative;
 }
 
+.hero .container {
+    bottom: 0;
+    left: 0;
+    padding: 3em;
+    position: absolute;
+}
 
 .hero-text {
     color: #fff;
     font-size: .8rem;
 }
-
-.hero-text h1 {
-    margin-top: 0;
-}
-
-
-    
-
-/* cursor: pointer;
-border: 0; */
-/* width: 3em;
-height: 3em; */

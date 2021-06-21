@@ -18,7 +18,6 @@ const animeStore = [
         ranked: 84,
         studios: 'Toei Animation',
         genres: 'Shounen'
-
     },
     {
         title: 'Konosuba',

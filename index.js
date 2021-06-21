@@ -47,13 +47,13 @@ app.get('/mangaShow', async (req, res) => {
 
 app.get('/products/:id', async (req, res) => {
     const { id } = req.params;
-    const anime = await Anime.findById(id)
+    const anime = await Anime.findById(id);
     // console.log(anime)
     // res.send('anime found!')
     res.render('products/animeDetails', { anime })
 })
 
-app.get('/products/:id', async (req, res) => {
+app.get('/views/products/:id', async (req, res) => {
     const { id } = req.params;
     const manga = await Manga.findById(id)
     // console.log(manga)
