@@ -17,13 +17,14 @@ body {
     line-height: 1.2;
 }
 
-header {
+header  {
     background-color: var(--color-flamingo-orange) ;
     box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.9);
     padding: 1em;
     position: relative;
     width: 100%;
 }
+/* yap */
 
 .container {
     width: 90%;
@@ -103,7 +104,6 @@ header {
 }
 
 /* social--nav */
-
 .fa-twitter,
 .fa-facebook,
 .fa-instagram {

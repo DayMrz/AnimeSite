@@ -11,6 +11,7 @@
 }
 
 body {
+    background-color: rgb(248, 248, 248);
     font-family: 'Work Sans', Sans-serif ;
     font-weight: 400;
     margin: 0;
@@ -25,6 +26,7 @@ header {
     width: 100%;
 }
 
+
 .container {
     width: 90%;
     margin: 0 auto;
@@ -32,16 +34,13 @@ header {
 }
 
 .nav {
-    position: absolute;
-    visibility: hidden;
-    height: 0;
-    display: inline;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 500ms ease-in-out;
 }
 
 .nav--visible {
-    position: relative;
-    height: auto;
-    visibility: visible;
+    max-height: 100vh;
 }
 
 .social--nav {
@@ -52,12 +51,11 @@ header {
 }
 
 /* navbar */
-
 .nav ul {
-    margin: 1em 0 ;
     list-style: none;
+    margin: 1em 0 ;
     padding: 0;
-    height: auto;
+
 }
 
 .nav li {
@@ -79,9 +77,9 @@ header {
 
 .nav-toggle {
     cursor: pointer;
-    background-color: var(--mainColor-background);
+    background-color: var(--color-honey-purple);
     border: 0;
-    color: #fff;
+    color: #fff ;
     position: absolute;
     right: -1%;
 }
@@ -106,15 +104,12 @@ header {
 }
 
 /* social--nav */
-
 .fa-twitter,
 .fa-facebook,
 .fa-instagram {
     color: #fff;
     margin: 0  1em;
 }
-
-
 
 /* hero  */
 .hero {
@@ -137,4 +132,42 @@ header {
 .hero-text {
     color: #fff;
     font-size: .8rem;
+}
+
+/* anime show page */
+
+
+.cards {
+    border: red 2px solid;
+    display: flex ;
+    flex-wrap: wrap  ;
+    text-align: center;
+    /* justify-content: space-evenly; */
+}
+
+.card__list {
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    list-style: none;
+    margin: 1em;
+}
+
+.card__list:focus,
+.card__list:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card__img {
+    height: 250px;
+    padding: 1em;
+}
+
+
+.card__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column-reverse;
+    /* text-align: center; */
 }

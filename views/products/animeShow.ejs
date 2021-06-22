@@ -1,16 +1,19 @@
 <%- include('partials/main/head') %>
 <%- include('partials/main/header') %>
 
-<h1>Shows</h1>
-<ul>
-    <% for(let anime of animes) { %>
-        <li>
-            <a href="/products/<%= anime._id%>">
-                <%= anime.title %>
-                <img src="<%= anime.image %>" alt="<%= anime.title %>" />
-            </a>
-        </li>
-    <% } %>
-</ul>
 
+<div class="container row">
+    <h1>Shows</h1>
+    <ul class="cards">
+        <% for(let anime of animes) { %>
+            <li class="card__list">
+                <a class="card__link" href="/products/<%= anime._id%>">
+                    <%= anime.title %>
+                    <img class="card__img" src="<%= anime.image %>" alt="<%= anime.title %>" />
+                </a>
+            </li>
+            <% } %>
+    </ul>
+</div>
+        
 <%- include('partials/main/footer') %>
