@@ -1,6 +1,5 @@
-# Anime App
+# Anime Site
 Hey there! this is my first attempt to create something that I am passionate about. 
-In the following lines, I will try to give an explanation of how I did it. 
 Please if you have any questions or there are misconceptions, let me know!! :)
 
 
