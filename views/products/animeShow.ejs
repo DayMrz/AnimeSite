@@ -1,19 +1,46 @@
 <%- include('partials/main/head') %>
-<%- include('partials/main/header') %>
+    <%- include('partials/main/header') %>
 
 
-<div class="container row">
-    <h1>Shows</h1>
-    <ul class="cards">
-        <% for(let anime of animes) { %>
-            <li class="card__list">
-                <a class="card__link" href="/products/<%= anime._id%>">
-                    <%= anime.title %>
-                    <img class="card__img" src="<%= anime.image %>" alt="<%= anime.title %>" />
+        <div class="container row">
+
+            <div class="sidebar">
+                <a href="#">
+                    <div class="sidebar__cont sidebar__row">
+
+                        <div class="sidebar__logo">
+                            <img class="pokelogo" src="./pictures/pokemon-logo.png" alt="pokemon logo image">
+                            <img class="pokeball" src="./pictures/pokemon-pokeball-logo.png"
+                                alt="pokemon logo pokeball">
+                        </div>
+                        <div class="sidebar__text">
+                            <p> Want to be a Pokémon Master? </p>
+                        </div>
+
+                    </div>
                 </a>
-            </li>
-            <% } %>
-    </ul>
-</div>
-        
-<%- include('partials/main/footer') %>
+            </div>
+
+            <div class="cont__cards">
+
+                <h1>Shows</h1>
+                <ul class="cards">
+                    <% for(let anime of animes) { %>
+                        <li class="card__list">
+                            <a class="card__link" href="/products/<%= anime._id%>">
+                                <h5>
+                                    <%= anime.title %>
+                                </h5>
+                                <img class="card__img" src="<%= anime.image %>" alt="<%= anime.title %>" />
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+
+
+
+        </div>
+        </div>
+
+        <%- include('partials/main/footer') %>

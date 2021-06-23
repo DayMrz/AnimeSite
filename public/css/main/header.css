@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,900;1,700&display=swap');
 
 :root {
-    --color-honey-purple: #551868;
+    --color-Alabaster-background: #F7F7F7;
     --color-flamingo-orange: #EC6137;
     --color-Gray-Suit: #C5C2CC;
+    --color-honey-purple: #551868;
+    
+    --shadow-cards-initial: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --shadow-cards-hover: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 *, *::before, *::after {
@@ -11,7 +15,7 @@
 }
 
 body {
-    background-color: rgb(248, 248, 248);
+    background-color: var(--color-Alabaster-background);
     font-family: 'Work Sans', Sans-serif ;
     font-weight: 400;
     margin: 0;
@@ -31,6 +35,8 @@ header {
     width: 90%;
     margin: 0 auto;
     position: relative;
+
+    border: blueviolet 2px solid;
 }
 
 .nav {
@@ -65,9 +71,9 @@ header {
 
 .nav__link {
     color: var(--color-Gray-Suit);
-    text-transform: uppercase;
     margin-top:  .3em;
     text-decoration: none;
+    text-transform: uppercase;
 } 
 
 .nav__link:focus,
@@ -86,21 +92,21 @@ header {
 
 .nav__link--btn {
     background-color: var(--color-Gray-Suit);
-    color: var(--color-honey-purple);
     border-radius: 100px;
+    color: var(--color-honey-purple);
     padding: .6rem .8rem ;
 } 
 
 .hamburger {
     font-size: 1.3em;
-    width: 50%;
     position: relative;
+    width: 50%;
 }
 
 .fa-cloudversify {
-    font-size: 1.3em;
     cursor: pointer;
     color: #fff;
+    font-size: 1.3em;
 }
 
 /* social--nav */
@@ -136,38 +142,151 @@ header {
 
 /* anime show page */
 
-
 .cards {
-    border: red 2px solid;
     display: flex ;
     flex-wrap: wrap  ;
     text-align: center;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
+    padding: 0;
+    
+    border: red 2px solid;
 }
+
+
+.sidebar {
+    background-color: #fff;
+    margin-top: 1em;
+    box-shadow: var(--shadow-cards-initial) ;
+}
+
+
 
 .card__list {
     background-color: #fff;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 20px;
+    box-shadow: var(--shadow-cards-initial);
     list-style: none;
-    margin: 1em;
+    margin: .4em;
+    min-height: 80px;
+    min-width: 15%;
 }
-
 .card__list:focus,
-.card__list:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.card__list:hover,
+.sidebar:focus,
+.sidebar:hover {
+    box-shadow: var(--shadow-cards-hover);
 }
 
 .card__img {
-    height: 250px;
-    padding: 1em;
+    height: 127px;
+    min-width: 50px;
+    padding: .7em ;
+}
+
+.card__link {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: .5rem;
+    text-decoration: none;
+}
+
+.card__link h5 {
+    color: rgb(88, 88, 165);
+    margin: .8em;
+}
+
+/* sidebar pokemon-- not a sidebar */
+.sidebar__cont {
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
+}
+
+.sidebar__logo {
+    width: 50%;
+}
+
+.sidebar__text {
+    width: 50%;
 }
 
 
-.card__link {
-    text-decoration: none;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column-reverse;
-    /* text-align: center; */
+.pokeball {
+    max-height: 150px;
+    width: 70%;
+    position: relative;
+    left: 11px;
+    top: -20px;
+    
+}
+
+.pokelogo {
+    max-height: 300px;
+    position: relative;
+    width: 70%;
+    top: 5px;
+    left: 12px;
+    
+}
+
+.sidebar__text p {
+    font-size: .9rem;
+    text-align: center;
+    letter-spacing: .4rem;
+    margin-top: 0;
+}
+
+@media (min-width: 592px) {
+
+    .row {
+        display: flex;
+        flex-direction: row-reverse;
+        /* justify-content: initial; */
+    }
+
+    .sidebar {
+        background-color: var(--color-Alabaster-background);
+        box-shadow: none;
+        width: 35%;
+    }
+
+
+/* cards */
+    .card__list {
+        height: 300px;
+        min-width: 120px
+    }
+
+    
+    .card__img {
+        height: 250px;
+        min-width: 75px;
+        padding: .7em ;
+    }
+    .card__list {
+        margin: .4em;
+        min-height: 80px;
+        min-width: 15%;
+    }
+
+    .card__link h6 {
+        margin: 1em 0;
+        font-size: 12px;
+    }
+
+/* sidebar */
+
+    .sidebar__row {
+        display: table-row;
+        
+    }
+
+
+    .sidebar:focus,
+    .sidebar:hover {
+        background-color: #fff;
+        box-shadow: var(--shadow-cards-hover);
+    }
+
+
+    
 }
