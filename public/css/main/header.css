@@ -25,21 +25,21 @@ body {
 header {
     background-color: var(--color-honey-purple) ;
     box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.9);
-    padding: 1em;
+    padding: 1rem;
     position: relative;
     width: 100%;
 }
 
 
 .container {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     position: relative;
 
     border: blueviolet 2px solid;
 }
 
-.nav {
+nav {
     max-height: 0;
     overflow: hidden;
     transition: max-height 500ms ease-in-out;
@@ -53,25 +53,25 @@ header {
     background-color: var(--color-Gray-Suit) ;
     display: flex;
     justify-content: center;
-    padding: .5em;
+    padding: .5rem;
 }
 
 /* navbar */
-.nav ul {
+nav ul {
     list-style: none;
-    margin: 1em 0 ;
+    margin: 1rem 0 ;
     padding: 0;
 
 }
 
-.nav li {
+nav li {
     display: flex;
     justify-content: center;
 }
 
 .nav__link {
     color: var(--color-Gray-Suit);
-    margin-top:  .3em;
+    margin-top:  .3rem;
     text-decoration: none;
     text-transform: uppercase;
 } 
@@ -98,7 +98,7 @@ header {
 } 
 
 .hamburger {
-    font-size: 1.3em;
+    font-size: 5vw;
     position: relative;
     width: 50%;
 }
@@ -106,7 +106,7 @@ header {
 .fa-cloudversify {
     cursor: pointer;
     color: #fff;
-    font-size: 1.3em;
+    font-size: 5.5vw;
 }
 
 /* social--nav */
@@ -114,7 +114,8 @@ header {
 .fa-facebook,
 .fa-instagram {
     color: #fff;
-    margin: 0  1em;
+    font-size: 4.2vmin;
+    margin: 0  1.3rem;
 }
 
 /* hero  */
@@ -131,13 +132,14 @@ header {
 .hero .container {
     bottom: 0;
     left: 0;
-    padding: 3em;
+    padding: 1.8rem;
     position: absolute;
+
 }
 
 .hero-text {
     color: #fff;
-    font-size: .8rem;
+    font-size: 1em;
 }
 
 /* anime show page */
@@ -155,7 +157,7 @@ header {
 
 .sidebar {
     background-color: #fff;
-    margin-top: 1em;
+    margin-top: 4.7rem;
     box-shadow: var(--shadow-cards-initial) ;
 }
 
@@ -164,10 +166,11 @@ header {
 .card__list {
     background-color: #fff;
     box-shadow: var(--shadow-cards-initial);
+    min-height: 36vmin;
     list-style: none;
     margin: .4em;
-    min-height: 80px;
-    min-width: 15%;
+    width: 21vmin;
+
 }
 .card__list:focus,
 .card__list:hover,
@@ -177,9 +180,9 @@ header {
 }
 
 .card__img {
-    height: 127px;
-    min-width: 50px;
-    padding: .7em ;
+    min-height: 28vmin;
+    width: 20vmin;
+    margin: .3em;
 }
 
 .card__link {
@@ -189,9 +192,11 @@ header {
     text-decoration: none;
 }
 
-.card__link h5 {
+.card__link span {
     color: rgb(88, 88, 165);
-    margin: .8em;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: .5rem;
 }
 
 /* sidebar pokemon-- not a sidebar */
@@ -231,16 +236,21 @@ header {
 .sidebar__text p {
     font-size: .9rem;
     text-align: center;
-    letter-spacing: .4rem;
+    letter-spacing: .4em;
     margin-top: 0;
 }
 
-@media (min-width: 592px) {
+@media (min-width: 700px) {
 
-    .row {
+    header .row {
+        
+        display: flex ;
+        justify-content: space-between;
+    }
+
+    .container__show .row {
         display: flex;
         flex-direction: row-reverse;
-        /* justify-content: initial; */
     }
 
     .sidebar {
@@ -249,29 +259,38 @@ header {
         width: 35%;
     }
 
-
-/* cards */
-    .card__list {
-        height: 300px;
-        min-width: 120px
+    .card__link span {
+        font-size: 1.8em;
     }
 
+/* navbar */
+
+    nav {
+        display: flex;
+
+        overflow: visible;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        margin: 0;
     
-    .card__img {
-        height: 250px;
-        min-width: 75px;
-        padding: .7em ;
-    }
-    .card__list {
-        margin: .4em;
-        min-height: 80px;
-        min-width: 15%;
     }
 
-    .card__link h6 {
-        margin: 1em 0;
-        font-size: 12px;
+    .push {
+        margin-right: auto;
     }
+
+    .fa-cloudversify {
+        font-size: 4.2vmin;
+
+    }
+
+
 
 /* sidebar */
 
