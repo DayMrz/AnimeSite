@@ -3,17 +3,22 @@ const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
 
+
 const Anime = require('./models/animeShow');
 const Manga = require('./models/mangaShow');
 
-mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log('Mongo CONNECTION OPEN!')
-    })
-    .catch(err => {
-        console.log('Mongo OHH no error!')
-        console.log(err)
-    })
+mongoose.connect('mongodb://localhost:27017/animeApp', {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+    console.log('we are connected!')
+});
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 

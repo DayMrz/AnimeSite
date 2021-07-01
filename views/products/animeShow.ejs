@@ -6,26 +6,38 @@
 
             <div class="container row">
 
-                <div class="sidebar">
+                <div class="box__sidebar">
                     <a href="#">
-                        <div class="sidebar__cont sidebar__row">
+                        <div class="box__sidebar__cont box__sidebar__row">
 
-                            <div class="sidebar__logo">
+                            <div class="box__sidebar__logo">
                                 <img class="pokelogo" src="./pictures/pokemon-logo.png" alt="pokemon logo image">
                                 <img class="pokeball" src="./pictures/pokemon-pokeball-logo.png"
                                     alt="pokemon logo pokeball">
                             </div>
-                            <div class="sidebar__text">
-                                <p> Want to be a Pokémon Master? </p>
+                            <div class="box__sidebar__text">
+                                <span> Are you a Pokémon Master? </span>
                             </div>
-
+                            <div class="box__sidebar__img1">
+                                <img class="pokeimg1" src="./pictures/ash&pikachu.png"
+                                    alt="ash and pikachu, piggi ride back">
+                            </div>
                         </div>
                     </a>
                 </div>
 
+
+
                 <div class="cont__cards">
 
                     <h1>Shows</h1>
+
+                    <form id="searchForm">
+                        <input type="text" placeholder="anime, drama..." name="query">
+                        <button class="btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
                     <ul class="cards">
                         <% for(let anime of animes) { %>
                             <li class="card__list">
