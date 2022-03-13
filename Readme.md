@@ -2,7 +2,7 @@
 Hey there! this is my first attempt to create something that I am passionate about. 
 Please if you have any questions or there are misconceptions, let me know!! :)
 
-
+*Note from Sam (MizouziE): This version has been changed from it's original authors repository, I plan to make a docker version using this repo with linked app, database and database management containers.*
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ To use it, we have to require it on our index.js file.
 Keep in mind that port 3000 allows you to experiment with express without root access. 
 It will always be located at the end of our file.
 
-````
+````javascript
 const express = require('express');
 const app = express();
 
@@ -69,7 +69,7 @@ node <file>
 ````
 - *Note:*
 When you launch your node.js application with Nodemon it will monitor for any changes and automatically restart the server, improving your productivity. 
-````
+````ssh
 npm i -g nodemon
 ````
 
