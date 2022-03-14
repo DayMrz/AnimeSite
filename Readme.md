@@ -2,19 +2,15 @@
 Hey there! this is my first attempt to create something that I am passionate about. 
 Please if you have any questions or there are misconceptions, let me know!! :)
 
-*Note from Sam (MizouziE): This version has been changed from it's original authors repository, I plan to make a docker version using this repo with linked app, database and database management containers.*
-
 ## Getting Started
 
-- Create a package.json file.
-Generate it without having it ask any questions:
+- Install `package.json` file dependancies.
 ````ssh
 npm install
 ````
 
-
 - Express
-To use it, we have to require it on our index.js file.
+    - To use it, we have to require it on our index.js file.
 
 Keep in mind that port 3000 allows you to experiment with express without root access. 
 It will always be located at the end of our file.
@@ -34,7 +30,7 @@ app.listen(3000, () => {
 ````
 
 - EJS
- To use our EJS package you need to create a path for the directory that will contained the EJS files (named it as you pleased) 
+    - To use our EJS package you need to create a path for the directory that will contained the EJS files (named it as you pleased) 
 ````javascript
 const path = require('path');
 
