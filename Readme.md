@@ -2,20 +2,32 @@
 Hey there! this is my first attempt to create something that I am passionate about. 
 Please if you have any questions or there are misconceptions, let me know!! :)
 
+
+
 ## Getting Started
 
-- Install `package.json` file dependancies.
-````ssh
-npm install
+-Create a package.json file.
+Generate it without having it ask any questions:
+````
+npm init -y
+````
+-Install [Express](http://expressjs.com/), [EJS](https://ejs.co/) & [Mongoose](https://mongoosejs.com/)
+
+These are the packages we are going to use. 
+
+````
+npm i express ejs mongoose
 ````
 
-- Express
-    - To use it, we have to require it on our index.js file.
+
+
+-Express
+To use it, we have to require it on our index.js file.
 
 Keep in mind that port 3000 allows you to experiment with express without root access. 
 It will always be located at the end of our file.
 
-````javascript
+````
 const express = require('express');
 const app = express();
 
@@ -29,9 +41,9 @@ app.listen(3000, () => {
 })
 ````
 
-- EJS
-    - To use our EJS package you need to create a path for the directory that will contained the EJS files (named it as you pleased) 
-````javascript
+-EJS
+ To use our EJS package you need to create a path for the directory that will contained the EJS files (named it as you pleased) 
+````
 const path = require('path');
 
 app.set('views', path.join(__dirname, 'views'));
@@ -39,7 +51,7 @@ app.set('view engine', 'ejs');
 
 ````
 
-- Mongoose
+-Mongoose
 
 Go to the documentation and follow the steps to run mongoose. [Getting Started](https://mongoosejs.com/docs/index.html)
 
@@ -48,7 +60,7 @@ Remember!!  for this to run, you must have running background 'mongod' or 'mongo
 (Set up MongoDB on [Windows](https://zarkom.net/blogs/how-to-install-mongodb-for-development-in-windows-3328) or [MAC](https://www.bing.com/videos/search?view=detail&mmscn=vstp&ru=%2Fvideos%2Fsearch%3Fq%3Dmongodb%2Btutorial%2Bmac%26FORM%3DHDRSC3&mid=EDC05EF118D6CDBE43ACEDC05EF118D6CDBE43AC&q=mongodb%20tutorial%20mac))
 
 
-````javascript
+````
 mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true })
     .then(() => {
         console.log('Mongo CONNECTION OPEN!')
@@ -60,12 +72,12 @@ mongoose.connect('mongodb://localhost:27017/animeApp', { userNewUrlParser: true 
 ````
 run this node app in your command line. 
 
-````ssh
+````
 node <file>
 ````
-- *Note:*
+*-Note:*
 When you launch your node.js application with Nodemon it will monitor for any changes and automatically restart the server, improving your productivity. 
-````ssh
+````
 npm i -g nodemon
 ````
 
